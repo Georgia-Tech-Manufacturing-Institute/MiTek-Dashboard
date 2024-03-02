@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>A1</title>
+    <link rel="icon" href="images/buzz.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="nav-wrapper">
+            <div class="nav-link-wrapper">
+                <a href="index.html">
+                    <img src="images/GeorgiaTech_White.svg">
+                    <img src="images/mitek.png">
+                </a>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <nav id="machinelist" class="sidenav">
+                <ul>
+                    <li><a href="A1_1.html">A1_1</a></li>
+                    <li><a href="A1_2.html">A1_2</a></li>
+                    <li><a href="A2_1.html">A2_1</a></li>
+                    <li><a href="A2_2.html">A2_2</a></li>
+                    <li><a href="B1_1.html">B1_1</a></li>
+                    <li><a href="B1_2.html">B1_2</a></li>
+                    <li><a href="B2_1.html">B2_1</a></li>
+                    <li><a href="B2_2.html">B2_1</a></li>
+                </ul>
+            </nav>
+            <div id="main" class="main-wrapper">
+                <div class="page-wrapper">
+                    <!-- Machine name, image, nest video -->
+                    <div class="header-wrapper">
+                        <h1>A1_1</h1>
+                    </div>
+                    <div class="item-wrapper">
+                        <h3>HAT 0 Average</h3>
+                        <div class="plot-wrapper" id="hat0-avg"></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <h3>HAT 0 Max</h3>
+                        <div class="plot-wrapper" id="hat0-max"></div>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h3>HAT 1 Average</h3>
+                        <div class="plot-wrapper" id="hat1-avg"></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <h3>HAT 1 Max</h3>
+                        <div class="plot-wrapper" id="hat1-max"></div>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h3>HAT 2 Average</h3>
+                        <div class="plot-wrapper" id="hat2-avg"></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <h3>HAT 2 Max</h3>
+                        <div class="plot-wrapper" id="hat2-max"></div>
+                    </div>
+
+                    <div class="item-wrapper">
+                        <h3>HAT 3 Average</h3>
+                        <div class="plot-wrapper" id="hat3-avg"></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <h3>HAT 3 Max</h3>
+                        <div class="plot-wrapper" id="hat3-max"></div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/httpGetAsync.js"></script>
+<script src="js/getData.js"></script>
+<script src="js/generatePlot.js"></script>
+<script>
+    const assetId = "Mitek0"
+
+    generatePlot("MeanVals", "hat0-avg", assetId, "0")
+    generatePlot("MaxVals", "hat0-max", assetId, "0")
+    generatePlot("MeanVals", "hat1-avg", assetId, "1")
+    generatePlot("MaxVals", "hat1-max", assetId, "1")
+    generatePlot("MeanVals", "hat2-avg", assetId, "2")
+    generatePlot("MaxVals", "hat2-max", assetId, "2")
+    generatePlot("MeanVals", "hat3-avg", assetId, "3")
+    generatePlot("MaxVals", "hat3-max", assetId, "3")
+
+    setInterval(generatePlot, 5*60*1000, "MeanVals", "hat0-avg", assetId, "0");
+    setInterval(generatePlot, 5*60*1000, "MaxVals", "hat0-max", assetId, "0");
+    setInterval(generatePlot, 5*60*1000, "MeanVals", "hat1-avg", assetId, "1");
+    setInterval(generatePlot, 5*60*1000, "MaxVals", "hat1-max", assetId, "1");    
+    setInterval(generatePlot, 5*60*1000, "MeanVals", "hat2-avg", assetId, "2");
+    setInterval(generatePlot, 5*60*1000, "MaxVals", "hat2-max", assetId, "2");
+    setInterval(generatePlot, 5*60*1000, "MeanVals", "hat3-avg", assetId, "3");
+    setInterval(generatePlot, 5*60*1000, "MaxVals", "hat3-max", assetId, "3");
+
+
+</script>
+</html>
