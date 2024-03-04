@@ -91,10 +91,12 @@ body {
     padding: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 300px 300px;
+    grid-template-rows: 50px 300px 300px 300px 300px ;
     grid-template-areas: "header header"
                         "data0 data1"
-                        "data2 data3";
+                        "data2 data3"
+                        "data4 data5"
+                        "data6 data7";
     grid-gap: 10px;
 }
 

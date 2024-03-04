@@ -95,61 +95,61 @@
                             </div>
                         </a>
                     </div>
-                    <div class="machine-wrapper" id="A3_1">
-                        <a href="A3_1.html">
+                    <div class="machine-wrapper" id="B1_1">
+                        <a href="B1_1.html">
                             <div class="machine-block">
                                 <div class="machine-status" id="EOS-status">
-                                    <h2>A3_1</h2>
-                                    <div class="heartbeat-color" id="A3_1-heartbeat">
-                                        <p class="heartbeat-text" id="A3_1-heartbeat-time"> </p>
+                                    <h2>B1_1</h2>
+                                    <div class="heartbeat-color" id="B1_1-heartbeat">
+                                        <p class="heartbeat-text" id="B1_1-heartbeat-time"> </p>
                                     </div>
-                                    <div class="data-color" id="A3_1-data">
-                                        <p class="data-text" id="A3_1-data-time"> </p>
+                                    <div class="data-color" id="B1_1-data">
+                                        <p class="data-text" id="B1_1-data-time"> </p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="machine-wrapper" id="A3_2">
-                        <a href="A3_2.html">
+                    <div class="machine-wrapper" id="B1_2">
+                        <a href="B1_2.html">
                             <div class="machine-block">
                                 <div class="machine-status" id="EOS-status">
-                                    <h2>A3_2</h2>
-                                    <div class="heartbeat-color" id="A3_2-heartbeat">
-                                        <p class="heartbeat-text" id="A3_2-heartbeat-time"> </p>
+                                    <h2>B1_2</h2>
+                                    <div class="heartbeat-color" id="B1_2-heartbeat">
+                                        <p class="heartbeat-text" id="B1_2-heartbeat-time"> </p>
                                     </div>
-                                    <div class="data-color" id="A3_2-data">
-                                        <p class="data-text" id="A3_2-data-time"> </p>
+                                    <div class="data-color" id="B1_2-data">
+                                        <p class="data-text" id="B1_2-data-time"> </p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="machine-wrapper" id="A4_1">
-                        <a href="A4_1.html">
+                    <div class="machine-wrapper" id="B2_1">
+                        <a href="B2_1.html">
                             <div class="machine-block">
                                 <div class="machine-status" id="EOS-status">
-                                    <h2>A4_1</h2>
-                                    <div class="heartbeat-color" id="A4_1-heartbeat">
-                                        <p class="heartbeat-text" id="A4_1-heartbeat-time"> </p>
+                                    <h2>B2_1</h2>
+                                    <div class="heartbeat-color" id="B2_1-heartbeat">
+                                        <p class="heartbeat-text" id="B2_1-heartbeat-time"> </p>
                                     </div>
-                                    <div class="data-color" id="A4_1-data">
-                                        <p class="data-text" id="A4_1-data-time"> </p>
+                                    <div class="data-color" id="B2_1-data">
+                                        <p class="data-text" id="B2_1-data-time"> </p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="machine-wrapper" id="A4_2">
-                        <a href="A4_2.html">
+                    <div class="machine-wrapper" id="B2_2">
+                        <a href="B2_2.html">
                             <div class="machine-block">
                                 <div class="machine-status" id="EOS-status">
-                                    <h2>A4_2</h2>
-                                    <div class="heartbeat-color" id="A4_2-heartbeat">
-                                        <p class="heartbeat-text" id="A4_2-heartbeat-time"> </p>
+                                    <h2>B2_2</h2>
+                                    <div class="heartbeat-color" id="B2_2-heartbeat">
+                                        <p class="heartbeat-text" id="B2_2-heartbeat-time"> </p>
                                     </div>
-                                    <div class="data-color" id="A4_2-data">
-                                        <p class="data-text" id="A4_2-data-time"> </p>
+                                    <div class="data-color" id="B2_2-data">
+                                        <p class="data-text" id="B2_2-data-time"> </p>
                                     </div>
                                 </div>
                             </div>
@@ -165,21 +165,21 @@
 <script>
     // initial heartbeat and data color and text
     getHeartbeat("MiTekA1_1", "A1_1");
-    // getHeartbeat("MiTekA1_2", "A1_2");
-    // getHeartbeat("MiTekA2_1", "A2_1");
-    // getHeartbeat("MiTekA2_2", "A2_2");
-    // getHeartbeat("MiTekB1_1", "B1_1");
-    // getHeartbeat("MiTekB1_2", "B1_2");
-    // getHeartbeat("MiTekB2_1", "B2_1");
-    // getHeartbeat("MiTekB2_2", "B2_2");
+    getHeartbeat("MiTekA1_2", "A1_2");
+    getHeartbeat("MiTekA2_1", "A2_1");
+    getHeartbeat("MiTekA2_2", "A2_2");
+    getHeartbeat("MiTekB1_1", "B1_1");
+    getHeartbeat("MiTekB1_2", "B1_2");
+    getHeartbeat("MiTekB2_1", "B2_1");
+    getHeartbeat("MiTekB2_2", "B2_2");
     // update heartbeat and data on interval
     setInterval(getHeartbeat, 30*1000, "MiTekA1_1", "A1_1"); // Time in milliseconds
-    // setInterval(getHeartbeat, 30*1000, "MiTekA1_2", "A1_2");
-    // setInterval(getHeartbeat, 30*1000, "MiTekA2_1", "A2_1"); 
-    // setInterval(getHeartbeat, 30*1000, "MiTekA2_2", "A2_2"); 
-    // setInterval(getHeartbeat, 30*1000, "MiTekB1_1", "B1_1"); 
-    // setInterval(getHeartbeat, 30*1000, "MiTekB1_2", "B1_2"); 
-    // setInterval(getHeartbeat, 30*1000, "MiTekB2_1", "B2_1"); 
-    // setInterval(getHeartbeat, 30*1000, "MiTekB2_2", "B2_2"); 
+    setInterval(getHeartbeat, 30*1000, "MiTekA1_2", "A1_2");
+    setInterval(getHeartbeat, 30*1000, "MiTekA2_1", "A2_1"); 
+    setInterval(getHeartbeat, 30*1000, "MiTekA2_2", "A2_2"); 
+    setInterval(getHeartbeat, 30*1000, "MiTekB1_1", "B1_1"); 
+    setInterval(getHeartbeat, 30*1000, "MiTekB1_2", "B1_2"); 
+    setInterval(getHeartbeat, 30*1000, "MiTekB2_1", "B2_1"); 
+    setInterval(getHeartbeat, 30*1000, "MiTekB2_2", "B2_2"); 
 </script>
 </html>
