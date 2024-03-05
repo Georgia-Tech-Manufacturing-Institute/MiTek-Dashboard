@@ -23,13 +23,15 @@ async function generatePlot(dataItemId, elementId, assetId, itemInstanceId) { //
     var base_url = "https://uu93rouaad.execute-api.us-east-1.amazonaws.com/v1/messages-proxy?";
     base_url += "assetId=" + assetId; 
 
-    var data = await httpGetAsync(base_url + "&dataItemId=ChannelLabels&limit=1");
-    const columnNames = JSON.parse(JSON.parse(data)[0].value);
-    const startTime = JSON.parse(data)[0].dateTime.replace('.','+').replace('Z','');
-    console.log(itemInstanceId, startTime, columnNames);
+    // var data = await httpGetAsync(base_url + "&dataItemId=ChannelLabels&limit=1");
+    // const columnNames = JSON.parse(JSON.parse(data)[0].value);
+    // const startTime = JSON.parse(data)[0].dateTime.replace('.','+').replace('Z','');
+    // console.log(itemInstanceId, startTime, columnNames);
+    // we didn't end up using the names before hand so switching to hard coding
+    const columnNames = ['Chan0', 'Chan1', 'Chan2', 'Chan3', 'Chan4', 'Chan5', 'Chan6', 'Chan7'];
 
     var url = base_url + "&dataItemId=" + dataItemId;
-    url += "&startDateTime=" + startTime;  // 2024-02-29T19:00:55+783
+    // url += "&startDateTime=" + startTime;  // 2024-02-29T19:00:55+783
     // url += "&endDateTime=2024-02-29T19:15:55+783";
     url += "&limit=200"
     // console.log(url);
