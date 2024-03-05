@@ -31,7 +31,7 @@ async function generatePlot(dataItemId, elementId, assetId, itemInstanceId) { //
     var url = base_url + "&dataItemId=" + dataItemId;
     url += "&startDateTime=" + startTime;  // 2024-02-29T19:00:55+783
     // url += "&endDateTime=2024-02-29T19:15:55+783";
-    url += "&limit=1000"
+    url += "&limit=200"
     // console.log(url);
     var data = await getDataArray(url, 'value', itemInstanceId);
 
